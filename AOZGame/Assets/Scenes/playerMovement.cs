@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour
 {
+    //Code used from Unity Documentation
     private CharacterController controller;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    private float playerSpeed = 5.0f;
+    private float playerSpeed = 7.0f;
     private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
+    private float gravityValue = -15f;
 
     Rigidbody rigibody;
     // Start is called before the first frame update
@@ -37,7 +38,7 @@ public class playerMovement : MonoBehaviour
         }
 
         // Changes the height position of the player..
-        if (Input.GetKey(KeyCode.R) && groundedPlayer)
+        if (Input.GetKey(KeyCode.Space) && groundedPlayer)
         {
             playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
         }

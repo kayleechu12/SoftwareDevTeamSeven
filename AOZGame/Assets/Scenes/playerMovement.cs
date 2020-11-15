@@ -22,6 +22,7 @@ public class playerMovement : MonoBehaviour
         float moveAxis = Input.GetAxisRaw(moveInputAxis);
         float turnAxis = Input.GetAxisRaw(turnInputAxis);
         ApplyInput(moveAxis, turnAxis);
+
     }
     private void ApplyInput(float moveInput, float turnInput)
     {
